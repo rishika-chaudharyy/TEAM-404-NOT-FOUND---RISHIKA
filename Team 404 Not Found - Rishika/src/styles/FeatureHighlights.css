@@ -1,0 +1,205 @@
+/* Feature Section */
+.feature-section {
+  background: #f0f4fb;
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("./feature.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Container */
+.feature-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  /* ✅ Stretch for equal height */
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+}
+
+/* Left: Floating Image */
+.feature-left {
+  position: relative;
+  width: 40%;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.floating-img-wrapper {
+  width: 100%;
+  height: 100%;
+  max-width: 360px;
+  max-height: 480px;
+  /* ✅ Match height of 3 cards (160px x 3) */
+  margin: auto;
+  animation: floatUpDown 4s ease-in-out infinite;
+}
+
+.feature-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+/* Curvy path */
+.curvy-path {
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 0;
+}
+
+.curvy-path::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg width='100%' height='80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,40 C200,0 400,80 600,40 C800,0 1000,80 1200,40' stroke='%234b5ccc' fill='transparent' stroke-width='3' stroke-dasharray='5,5' /%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.ball {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #ff5e57;
+  border-radius: 50%;
+  top: 0;
+}
+
+.ball1 {
+  animation: moveBall 6s linear infinite;
+}
+
+.ball2 {
+  animation: moveBall 6s linear infinite 3s;
+}
+
+@keyframes moveBall {
+  0% {
+    left: 0%;
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    left: 100%;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatUpDown {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+/* Right Cards */
+.feature-right {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 25px 25px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.feature-card p {
+  font-size: 1.05rem;
+  color: #eaeaea;
+  line-height: 1.6;
+}
+
+.emoji {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+}
+
+/* Card Colors */
+.card1 {
+  border-left: 6px solid #ff6b6b;
+}
+
+.card2 {
+  border-left: 6px solid #4b5ccc;
+}
+
+.card3 {
+  border-left: 6px solid #27ae60;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .feature-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-left,
+  .feature-right {
+    width: 80%;
+    text-align: center;
+  }
+
+  .floating-img-wrapper {
+    max-height: 300px;
+  }
+
+  .feature-right {
+    gap: 20px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.95rem;
+  }
+
+  .emoji {
+    font-size: 2.4rem;
+  }
+}

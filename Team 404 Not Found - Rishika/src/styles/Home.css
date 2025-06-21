@@ -1,0 +1,11 @@
+/* Home.css */
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-image: url("https://img.freepik.com/free-vector/network-connection-background-gradient_23-2148879893.jpg?uid=R201466416&ga=GA1.1.1215698290.1736679979&semt=ais_hybrid&w=740");
+  background-size: cover;
+  background-position: center;
+}

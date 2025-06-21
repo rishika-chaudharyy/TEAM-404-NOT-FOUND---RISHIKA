@@ -1,0 +1,147 @@
+.testimonial-section {
+  padding: 100px 20px;
+  background: linear-gradient(to bottom right, #f4f6ff, #dee9ff);
+  text-align: center;
+  position: relative;
+  background: url("./fgjr7.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.testimonial-heading {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 800;
+  margin-bottom: 50px;
+  animation: pulseText 2s infinite alternate;
+}
+
+.testimonial-box {
+  max-width: 750px;
+  margin: auto;
+  position: relative;
+  background: rgb(82, 82, 130);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  padding: 40px 30px 60px;
+  transition: background 0.5s ease, transform 0.5s ease;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.testimonial-box:hover {
+  background: rgba(75, 92, 204, 0.1);
+  transform: scale(1.02);
+}
+
+.testimonial-img {
+  position: absolute;
+  bottom: 5px;
+  left: 30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  animation: floatImg 4s ease-in-out infinite;
+}
+
+.testimonial-content {
+  padding: 20px 30px 20px 100px;
+  text-align: left;
+}
+
+.testimonial-message {
+  font-size: 1.2rem;
+  color: white;
+  font-style: italic;
+  margin-bottom: 20px;
+  animation: fadeInText 1s ease-in-out;
+}
+
+.testimonial-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #4b5ccc;
+}
+
+.testimonial-role {
+  font-size: 1rem;
+  color: #555;
+}
+
+.testimonial-buttons {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #4b5ccc;
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 5px 15px rgba(75, 92, 204, 0.3);
+}
+
+.testimonial-btn:hover {
+  background-color: #3544a2;
+  transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes pulseText {
+  0% {
+    text-shadow: 0 0 5px #a6b4ff;
+  }
+
+  100% {
+    text-shadow: 0 0 20px #4b5ccc;
+  }
+}
+
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes floatImg {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .testimonial-content {
+    padding-left: 20px;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  .testimonial-img {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -5px;
+  }
+}

@@ -1,0 +1,161 @@
+.special-wrapper {
+  position: relative;
+  background: #000;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 100px 10%;
+  color: #fff;
+}
+
+.curvy-path {
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  width: 100%;
+  max-height: 300px;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.flowing-balls .ball {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #00d9ff;
+  animation: floatAlong 12s linear infinite;
+}
+
+.flowing-balls .ball:nth-child(odd) {
+  animation-delay: 2s;
+}
+
+@keyframes floatAlong {
+  0% {
+    transform: translateX(100vw);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-100vw);
+    opacity: 0;
+  }
+}
+
+.moving-image-container {
+  position: absolute;
+  top: 30%;
+  right: -300px;
+  animation: flyLeft 10s ease-in-out infinite;
+}
+
+.moving-image {
+  width: 220px;
+  border-radius: 12px;
+  z-index: 2;
+}
+
+.video-icon-on-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 3rem;
+  color: #00d9ff;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+@keyframes flyLeft {
+  0% {
+    right: -300px;
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  40% {
+    right: 40%;
+  }
+
+  70% {
+    right: 20%;
+    opacity: 1;
+  }
+
+  90% {
+    right: -300px;
+    opacity: 0;
+  }
+
+  100% {
+    right: -300px;
+    opacity: 0;
+  }
+}
+
+.floating-icons .path-video-icon {
+  position: absolute;
+  font-size: 2rem;
+  color: #00d9ff;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.icon1 {
+  bottom: 40%;
+  left: 20%;
+}
+
+.icon2 {
+  bottom: 45%;
+  left: 50%;
+}
+
+.icon3 {
+  bottom: 38%;
+  left: 75%;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.video-text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 2.2rem;
+  color: #a2c4ff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .moving-image-container {
+    top: 40%;
+    right: -250px;
+  }
+
+  .moving-image {
+    width: 180px;
+  }
+
+  .video-text {
+    font-size: 1.5rem;
+    left: 5%;
+  }
+}

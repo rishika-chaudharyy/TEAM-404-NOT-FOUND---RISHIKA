@@ -1,0 +1,178 @@
+.epic-section {
+  position: relative;
+  padding: 120px 10% 80px;
+  background: linear-gradient(to bottom, #000 60%, #111);
+  color: #fff;
+  overflow: hidden;
+  background: url("https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg?uid=R182642439&ga=GA1.1.1215698290.1736679979&semt=ais_hybrid&w=740") no-repeat center center/cover;
+}
+
+.epic-heading-pill {
+  display: inline-block;
+  background-color: #00d9ff;
+  color: #000;
+  padding: 10px 25px;
+  border-radius: 999px;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  animation: pulse 2s infinite;
+}
+
+.epic-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #a2c4ff;
+}
+
+.epic-desc {
+  font-size: 1.2rem;
+  color: #ddd;
+  line-height: 1.8;
+  max-width: 800px;
+  margin-bottom: 60px;
+  animation: fadeIn 1.5s ease;
+}
+
+/* Cards */
+.epic-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.epic-card {
+  flex: 1;
+  min-width: 280px;
+  height: 200px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transition: background 0.6s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.epic-card:hover {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.card1:hover {
+  background-image: url('https://img.freepik.com/free-vector/abstract-blue-circle-black-background-technology_1142-12714.jpg?uid=R182642439&ga=GA1.1.1215698290.1736679979&semt=ais_hybrid&w=740');
+  /* ✅ You provide this */
+}
+
+.card2:hover {
+  background-image: url('https://img.freepik.com/free-photo/twig-cloth-plate_23-2147811240.jpg?uid=R182642439&ga=GA1.1.1215698290.1736679979&semt=ais_hybrid&w=740');
+}
+
+.card3:hover {
+  background-image: url('https://img.freepik.com/free-vector/abstract-black-lines-geometric-background_677411-2748.jpg?uid=R182642439&ga=GA1.1.1215698290.1736679979&semt=ais_hybrid&w=740');
+}
+
+.card-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  z-index: 2;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+}
+
+/* Snowflakes */
+.snowflakes {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.snowflake {
+  position: absolute;
+  color: #fff;
+  font-size: 1rem;
+  animation: fall linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.snowflake:nth-child(odd) {
+  font-size: 0.9rem;
+  animation-duration: 8s;
+  left: calc(100% * var(--i, 0.1));
+}
+
+.snowflake:nth-child(even) {
+  font-size: 1.2rem;
+  animation-duration: 10s;
+  left: calc(100% * var(--i, 0.3));
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .epic-title {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .epic-desc {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .epic-heading-pill {
+    display: block;
+    margin: 0 auto 20px;
+    font-size: 0.9rem;
+  }
+}

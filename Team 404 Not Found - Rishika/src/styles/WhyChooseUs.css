@@ -1,0 +1,140 @@
+.why-section {
+  position: relative;
+  padding: 100px 20px;
+  background: url("./3418448.jpg");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.why-header h2 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #ffffff;
+  /* Changed to white */
+  margin-bottom: 10px;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+.why-header h2 span {
+  color: #b6c2ff;
+  /* Lighter shade of blue for better contrast */
+}
+
+.why-header p {
+  font-size: 1.1rem;
+  color: #ffffff;
+  /* Changed to white */
+  margin-bottom: 60px;
+}
+
+.why-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  padding: 40px 30px;
+  width: 300px;
+  min-height: 320px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.why-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.icon-bubble {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: bounceEmoji 2.5s infinite ease-in-out;
+  color: #ffffff;
+  /* Emoji also in white */
+}
+
+.why-card h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  /* Changed to white */
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  font-size: 1rem;
+  color: #ffffff;
+  /* Changed to white */
+}
+
+/* Glowing heading animation */
+@keyframes glowText {
+  0% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+
+  100% {
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+}
+
+/* Emoji floating */
+@keyframes bounceEmoji {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+/* Shine gradient effect */
+.shine-effect {
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.2), transparent 60%);
+  animation: moveShine 10s linear infinite;
+  z-index: 0;
+  pointer-events: none;
+}
+
+@keyframes moveShine {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+
+  100% {
+    transform: rotate(360deg) translateX(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .why-card {
+    width: 90%;
+  }
+
+  .why-header h2 {
+    font-size: 2.2rem;
+  }
+
+  .why-header p {
+    font-size: 1rem;
+  }
+}

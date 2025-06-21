@@ -1,0 +1,94 @@
+.participation-section {
+  padding: 100px 10%;
+  background: #f9fbff;
+  color: #222;
+  background: url("./bg6.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.participation-heading {
+  font-size: 2.2rem;
+  text-align: center;
+  color: #20274a;
+  margin-bottom: 60px;
+}
+
+.timeline-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  margin: 40px 0;
+}
+
+.timeline-item.left .content {
+  width: 45%;
+  text-align: right;
+}
+
+.timeline-item.right .content {
+  width: 45%;
+  text-align: left;
+}
+
+.timeline-item .circle-line {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  position: relative;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.line {
+  width: 2px;
+  height: 100px;
+  background: #ccc;
+  margin-top: -5px;
+}
+
+.content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 8px;
+}
+
+.content p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .timeline-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .timeline-item.left .content,
+  .timeline-item.right .content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .timeline-item .circle-line {
+    width: auto;
+    margin: 20px 0;
+  }
+}

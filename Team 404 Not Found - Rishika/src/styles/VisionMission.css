@@ -1,0 +1,129 @@
+.vision-mission-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 10%;
+  gap: 40px;
+  background: #000;
+  color: white;
+  flex-wrap: wrap;
+  background: url("./mbg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.vision-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-heading {
+  font-size: 2rem;
+  color: #a2c4ff;
+  margin-bottom: 20px;
+}
+
+.subheading {
+  font-size: 1.4rem;
+  color: #00d9ff;
+  margin-top: 30px;
+}
+
+.section-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+  margin-top: 10px;
+}
+
+.vision-right {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.circle-container {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 136, 255, 0.2), rgba(0, 89, 255, 0.1));
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ✅ Flying image animation – center aligned and circular */
+.flying-img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(400px, -50%) scale(0.5);
+  opacity: 0;
+  animation: flyInOut 8s ease-in-out infinite;
+}
+
+@keyframes flyInOut {
+  0% {
+    transform: translate(400px, -50%) scale(0.5);
+    opacity: 0;
+  }
+
+  20% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  45% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+
+  65% {
+    transform: translate(-400px, -50%) scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(-400px, -50%) scale(0.5);
+    opacity: 0;
+  }
+}
+
+/* ✅ Responsive styles */
+@media (max-width: 768px) {
+  .vision-mission-section {
+    flex-direction: column;
+    padding: 60px 5%;
+  }
+
+  .circle-container {
+    width: 240px;
+    height: 240px;
+  }
+
+  .flying-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .section-heading {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .section-desc {
+    text-align: center;
+  }
+}
