@@ -42,7 +42,7 @@ To completely redesign the official website of **Inlighn Tech** — a company of
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/your-username/inlighn-tech-redesign.git
+git clone [https://github.com/your-username/inlighn-tech-redesign.git](https://github.com/rishika-chaudharyy/TEAM-404-NOT-FOUND---RISHIKA.git)
 cd "Team 404 Not Found - Rishika"
 f
 # 2. Install dependencies
